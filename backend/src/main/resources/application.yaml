@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: tinder-chat-service
+  profiles:
+    active: dev
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: hungnthe182170@fpt.edu.vn
+    password: vthdyyosechiqoni
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+graphhopper:
+  api:
+    key: bd94e62c-041a-421f-8083-8130055d35cb
+    url: https://graphhopper.com/api/1/route
+
+stomp:
+  broker:
+    relay:
+      host: localhost
+      port: 61613
+      login: guest
+      passcode: guest
+
+qdrant:
+  url: https://d707a2d2-d195-4d77-a7fc-ec63a252359f.europe-west3-0.gcp.cloud.qdrant.io
+  api-key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIn0.FYK62kNiohbIYtp9P6g7FUISDWyjfE3Du2W6z10Ss0k
