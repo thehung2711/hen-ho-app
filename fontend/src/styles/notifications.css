@@ -1,0 +1,98 @@
+/* Custom Toast Notification Styles */
+
+/* Match notification special styling */
+
+.match-toast {
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+
+.match-toast .Toastify__toast-body {
+  font-size: 14px;
+  line-height: 1.4;
+  padding: 12px 16px;
+}
+
+.match-toast .Toastify__close-button {
+  color: white;
+  opacity: 0.8;
+}
+
+.match-toast .Toastify__close-button:hover {
+  opacity: 1;
+}
+
+/* Like notification special styling */
+
+.like-toast {
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+
+.like-toast .Toastify__toast-body {
+  font-size: 14px;
+  line-height: 1.4;
+  padding: 12px 16px;
+  color: #333;
+}
+
+.like-toast .Toastify__close-button {
+  color: #666;
+  opacity: 0.6;
+}
+
+.like-toast .Toastify__close-button:hover {
+  opacity: 1;
+}
+
+/* Custom progress bar for match notifications */
+
+.match-toast .Toastify__progress-bar {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Custom progress bar for like notifications */
+
+.like-toast .Toastify__progress-bar {
+  background: #1890ff;
+}
+
+/* Animation for special notifications */
+
+@keyframes matchBounce {
+  0%,
+  20%,
+  53%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  40%,
+  43% {
+    transform: translate3d(0, -8px, 0);
+  }
+  70% {
+    transform: translate3d(0, -4px, 0);
+  }
+  90% {
+    transform: translate3d(0, -1px, 0);
+  }
+}
+
+.match-toast {
+  animation: matchBounce 0.8s ease-out;
+}
+
+@keyframes likeSlideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.like-toast {
+  animation: likeSlideIn 0.4s ease-out;
+}

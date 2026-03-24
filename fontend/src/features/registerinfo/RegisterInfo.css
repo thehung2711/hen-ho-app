@@ -1,0 +1,567 @@
+.register-info-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1890ff 0%, #40a9ff 100%);
+  padding: 40px 20px;
+}
+
+.register-info-wrapper {
+  width: 100%;
+  max-width: 700px;
+}
+
+.register-info-card {
+  border-radius: 20px !important;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15) !important;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95) !important;
+  padding: 30px;
+}
+
+.register-info-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.register-info-title {
+  color: #1890ff !important;
+  margin-bottom: 12px !important;
+  font-weight: bold;
+  font-size: 2.2rem !important;
+}
+
+.register-info-subtitle {
+  font-size: 16px;
+  color: #666 !important;
+  line-height: 1.5;
+}
+
+.register-info-form {
+  margin-top: 20px;
+}
+
+.ant-form-item-label > label {
+  color: #333;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.register-info-input,
+.register-info-select,
+.register-info-datepicker {
+  border-radius: 12px !important;
+  border: 2px solid #e8e8e8;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+.register-info-input:hover,
+.register-info-input:focus,
+.register-info-select:hover .ant-select-selector,
+.register-info-select.ant-select-focused .ant-select-selector,
+.register-info-datepicker:hover,
+.register-info-datepicker.ant-picker-focused {
+  border-color: #1890ff !important;
+  box-shadow: 0 0 0 3px rgba(255, 68, 88, 0.1) !important;
+}
+
+.input-icon {
+  color: #1890ff;
+  font-size: 16px;
+}
+
+/* Upload Section Styles */
+
+.upload-section {
+  text-align: center;
+}
+
+.avatar-uploader {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+}
+
+.avatar-uploader .ant-upload {
+  width: 120px !important;
+  height: 120px !important;
+  border-radius: 12px !important;
+  border: 2px dashed #1890ff !important;
+  background: rgba(255, 68, 88, 0.05) !important;
+  transition: all 0.3s ease;
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.avatar-uploader .ant-upload:hover {
+  border-color: #40a9ff !important;
+  background: rgba(255, 68, 88, 0.1) !important;
+  transform: scale(1.02);
+}
+
+.avatar-uploader .ant-upload-list-picture-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.avatar-uploader .ant-upload-list-picture-card-container {
+  width: 120px !important;
+  height: 120px !important;
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.avatar-uploader .ant-upload-list-item {
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+
+.avatar-uploader .ant-upload-list-item-thumbnail img {
+  object-fit: cover;
+}
+
+.avatar-uploader .ant-upload div {
+  color: #1890ff;
+  font-weight: 500;
+}
+
+.upload-hint {
+  margin-top: 12px;
+  padding: 0 20px;
+}
+
+.upload-hint .ant-typography {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Form Actions */
+
+.form-actions {
+  margin-top: 40px !important;
+  margin-bottom: 0 !important;
+}
+
+.complete-profile-button {
+  background: linear-gradient(135deg, #1890ff 0%, #40a9ff 100%) !important;
+  border: none !important;
+  border-radius: 12px !important;
+  height: 50px !important;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 68, 88, 0.3);
+}
+
+.complete-profile-button:hover,
+.complete-profile-button:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 68, 88, 0.4) !important;
+}
+
+.back-button {
+  color: #666 !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: 12px !important;
+  height: 44px !important;
+}
+
+.back-button:hover,
+.back-button:focus {
+  color: #1890ff !important;
+  background: rgba(255, 68, 88, 0.05) !important;
+}
+
+/* Select Dropdown Styles */
+
+.ant-select-dropdown {
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.ant-select-item-option-selected {
+  background: rgba(255, 68, 88, 0.1) !important;
+  color: #1890ff !important;
+}
+
+.ant-select-item-option-active {
+  background: rgba(255, 68, 88, 0.05) !important;
+}
+
+/* DatePicker Styles */
+
+.ant-picker-dropdown {
+  border-radius: 12px !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+}
+
+.ant-picker-today-btn {
+  color: #1890ff !important;
+}
+
+.ant-picker-cell-today .ant-picker-cell-inner {
+  color: #1890ff !important;
+  border-color: #1890ff !important;
+}
+
+.ant-picker-cell-selected .ant-picker-cell-inner {
+  background: #1890ff !important;
+}
+
+/* Form validation styles */
+
+.ant-form-item-has-error .register-info-input,
+.ant-form-item-has-error .register-info-select .ant-select-selector,
+.ant-form-item-has-error .register-info-datepicker {
+  border-color: #ff4d4f !important;
+}
+
+.ant-form-item-has-error .register-info-input:hover,
+.ant-form-item-has-error .register-info-input:focus,
+.ant-form-item-has-error .register-info-select:hover .ant-select-selector,
+.ant-form-item-has-error
+  .register-info-select.ant-select-focused
+  .ant-select-selector,
+.ant-form-item-has-error .register-info-datepicker:hover,
+.ant-form-item-has-error .register-info-datepicker.ant-picker-focused {
+  border-color: #ff4d4f !important;
+  box-shadow: 0 0 0 3px rgba(255, 77, 79, 0.1) !important;
+}
+
+.ant-form-item-explain-error {
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+/* Success validation styles */
+
+.ant-form-item-has-success .register-info-input,
+.ant-form-item-has-success .register-info-select .ant-select-selector,
+.ant-form-item-has-success .register-info-datepicker {
+  border-color: #52c41a !important;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .register-info-container {
+    padding: 20px 16px;
+  }
+  .register-info-card {
+    padding: 24px 20px;
+    border-radius: 16px !important;
+  }
+  .register-info-title {
+    font-size: 1.8rem !important;
+  }
+  .register-info-subtitle {
+    font-size: 15px;
+  }
+  .avatar-uploader .ant-upload,
+  .avatar-uploader .ant-upload-list-picture-card-container {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  .avatar-uploader {
+    justify-content: center;
+    gap: 8px;
+  }
+  .complete-profile-button {
+    height: 46px !important;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .register-info-container {
+    padding: 16px 12px;
+  }
+  .register-info-card {
+    padding: 20px 16px;
+  }
+  .register-info-title {
+    font-size: 1.6rem !important;
+  }
+  .register-info-header {
+    margin-bottom: 30px;
+  }
+  .avatar-uploader .ant-upload,
+  .avatar-uploader .ant-upload-list-picture-card-container {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .avatar-uploader {
+    justify-content: center;
+    gap: 6px;
+  }
+  .upload-hint {
+    padding: 0 10px;
+  }
+  .form-actions {
+    margin-top: 30px !important;
+  }
+}
+
+/* Focus styles for better accessibility */
+
+.register-info-input:focus-within,
+.register-info-select.ant-select-focused,
+.register-info-datepicker.ant-picker-focused {
+  outline: none;
+}
+
+.complete-profile-button:focus {
+  outline: 2px solid #1890ff;
+  outline-offset: 3px;
+}
+
+/* Animation for form errors */
+
+.ant-form-item-has-error {
+  animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-8px);
+  }
+  75% {
+    transform: translateX(8px);
+  }
+}
+
+/* Grid spacing adjustments */
+
+.ant-row {
+  margin-left: -8px !important;
+  margin-right: -8px !important;
+}
+
+.ant-col {
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}
+
+/* Form item spacing */
+
+.ant-form-item {
+  margin-bottom: 24px;
+}
+
+.ant-form-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Upload loading state */
+
+.ant-upload.ant-upload-drag.ant-upload-drag-hover {
+  border-color: #40a9ff !important;
+}
+
+/* Custom scrollbar for dropdowns */
+
+.ant-select-dropdown .rc-virtual-list-scrollbar {
+  width: 6px;
+}
+
+.ant-select-dropdown .rc-virtual-list-scrollbar-thumb {
+  background: rgba(255, 68, 88, 0.3);
+  border-radius: 3px;
+}
+
+/* Placeholder styles */
+
+.ant-input::placeholder,
+.ant-select-selection-placeholder {
+  color: #999 !important;
+  font-style: italic;
+}
+
+/* Loading spinner color */
+
+.ant-spin-dot-item {
+  background-color: #1890ff !important;
+}
+
+/* Interests Field Styles */
+
+.interests-field {
+  border: 2px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 12px 16px;
+  min-height: 48px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.interests-field:hover {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 3px rgba(255, 68, 88, 0.1);
+}
+
+.interests-display {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.selected-interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  flex: 1;
+}
+
+.interest-tag {
+  margin: 0 !important;
+  border-radius: 16px !important;
+  font-size: 12px;
+  padding: 2px 8px !important;
+  font-weight: 500;
+}
+
+/* Interests Modal Styles */
+
+.interests-modal .ant-modal-header {
+  border-bottom: 1px solid rgba(255, 68, 88, 0.1);
+  padding: 20px 24px 16px;
+}
+
+.interests-modal .ant-modal-title {
+  color: #1890ff;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.interests-modal .ant-modal-body {
+  padding: 20px 24px;
+}
+
+.interests-modal-content {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.interests-instruction {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-align: center;
+  padding: 12px;
+  background: rgba(255, 68, 88, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 68, 88, 0.1);
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.interest-item {
+  padding: 12px;
+  border: 2px solid #e8e8e8;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+  display: flex;
+  align-items: center;
+}
+
+.interest-item:hover {
+  border-color: #1890ff;
+  background: rgba(255, 68, 88, 0.05);
+  transform: translateY(-2px);
+}
+
+.loading-interests,
+.no-interests {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+  font-size: 16px;
+  grid-column: 1 / -1;
+  /* Span all columns */
+}
+
+.loading-interests {
+  color: #1890ff;
+}
+
+.interest-item.selected {
+  border-color: #1890ff;
+  background: rgba(255, 68, 88, 0.1);
+  color: #1890ff;
+}
+
+.interest-item .ant-checkbox-wrapper {
+  width: 100%;
+  margin: 0;
+  font-weight: 500;
+}
+
+.interest-item.selected .ant-checkbox-wrapper {
+  color: #1890ff;
+}
+
+.interest-item .ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
+
+.interests-save-btn {
+  background: #1890ff !important;
+  border-color: #1890ff !important;
+}
+
+.interests-save-btn:hover {
+  background: #40a9ff !important;
+  border-color: #40a9ff !important;
+}
+
+/* Responsive styles for interests */
+
+@media (max-width: 768px) {
+  .interests-modal {
+    margin: 16px;
+  }
+  .interests-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 8px;
+  }
+  .interest-item {
+    padding: 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .interests-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+  .interest-item {
+    padding: 8px;
+    font-size: 12px;
+  }
+  .interests-instruction {
+    padding: 8px;
+    font-size: 13px;
+  }
+}

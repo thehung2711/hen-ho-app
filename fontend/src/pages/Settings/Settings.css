@@ -1,0 +1,437 @@
+/* Settings Container */
+
+.settings-container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%);
+  padding-bottom: 80px;
+}
+
+/* Header */
+
+.settings-header {
+  background: white;
+  padding: 16px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.back-button {
+  font-size: 18px;
+  color: #1890ff;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.back-button:hover {
+  background: rgba(255, 68, 88, 0.1);
+  color: #1890ff;
+}
+
+.settings-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #1890ff 0%, #40a9ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.save-button {
+  background: linear-gradient(135deg, #1890ff 0%, #40a9ff 100%);
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(255, 68, 88, 0.3);
+}
+
+.save-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 68, 88, 0.4);
+}
+
+/* Content */
+
+.settings-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Settings Cards */
+
+.settings-card {
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.settings-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.settings-card .ant-card-head {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 68, 88, 0.05) 0%,
+    rgba(255, 107, 122, 0.05) 100%
+  );
+  border-bottom: 1px solid rgba(255, 68, 88, 0.1);
+}
+
+.settings-card .ant-card-head-title {
+  font-weight: 600;
+  color: #1890ff;
+}
+
+/* Setting Items */
+
+.setting-item {
+  margin-bottom: 24px;
+}
+
+.setting-item:last-child {
+  margin-bottom: 0;
+}
+
+.setting-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-weight: 500;
+  color: #333;
+}
+
+.setting-value {
+  color: #1890ff;
+  font-weight: 600;
+  background: rgba(255, 68, 88, 0.1);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.setting-description {
+  margin: 4px 0 0 0;
+  font-size: 12px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Sliders */
+
+.distance-slider .ant-slider-track {
+  background: linear-gradient(135deg, #1890ff 0%, #40a9ff 100%);
+}
+
+.distance-slider .ant-slider-handle {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 3px rgba(255, 68, 88, 0.2);
+}
+
+.distance-slider .ant-slider-handle:focus {
+  box-shadow: 0 0 0 5px rgba(255, 68, 88, 0.3);
+}
+
+.distance-slider .ant-slider-dot-active {
+  border-color: #1890ff;
+}
+
+/* Age Sliders */
+
+.age-sliders {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.age-slider-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.age-slider-item label {
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+}
+
+.age-slider-item .ant-slider-track {
+  background: linear-gradient(135deg, #4fc3f7 0%, #29b6f6 100%);
+}
+
+.age-slider-item .ant-slider-handle {
+  border-color: #4fc3f7;
+  box-shadow: 0 0 0 3px rgba(79, 195, 247, 0.2);
+}
+
+/* Selects */
+
+.location-select,
+.show-me-select {
+  width: 100%;
+}
+
+.location-select .ant-select-selector,
+.show-me-select .ant-select-selector {
+  border-radius: 8px;
+  border-color: #f0f0f0;
+}
+
+.location-select .ant-select-selector:hover,
+.show-me-select .ant-select-selector:hover {
+  border-color: #1890ff;
+}
+
+/* Buttons */
+
+.get-location-button {
+  width: 100%;
+  height: 44px;
+  border-radius: 12px;
+  border-color: #1890ff;
+  color: #1890ff;
+  font-weight: 500;
+  margin-top: 16px;
+  transition: all 0.2s ease;
+}
+
+.get-location-button:hover {
+  background: rgba(255, 68, 88, 0.1);
+  border-color: #1890ff;
+  color: #1890ff;
+  transform: translateY(-1px);
+}
+
+/* Current Address Display */
+
+.current-address {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.address-text {
+  color: #495057;
+  font-size: 14px;
+  line-height: 1.5;
+  word-break: break-all;
+}
+
+.get-location-button {
+  background: linear-gradient(135deg, #1890ff 0%, #40a9ff 100%);
+  border: none;
+  color: white;
+}
+
+/* Switch Customization */
+
+.ant-switch-checked {
+  background: linear-gradient(135deg, #1890ff 0%, #40a9ff 100%);
+}
+
+.ant-switch-checked:hover {
+  background: linear-gradient(135deg, #1890ff 0%, #40a9ff 100%);
+}
+
+/* Action Buttons */
+
+.settings-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.reset-button {
+  flex: 1;
+  height: 48px;
+  border-radius: 12px;
+  border-color: #d9d9d9;
+  color: #666;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.reset-button:hover {
+  border-color: #1890ff;
+  color: #1890ff;
+  background: rgba(255, 68, 88, 0.05);
+}
+
+.save-main-button {
+  flex: 2;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1890ff 0%, #40a9ff 100%);
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(255, 68, 88, 0.3);
+  transition: all 0.2s ease;
+}
+
+.save-main-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 68, 88, 0.4);
+}
+
+.save-main-button:disabled {
+  background: #d9d9d9;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .settings-header {
+    padding: 12px 16px;
+  }
+  .settings-header h1 {
+    font-size: 20px;
+  }
+  .settings-content {
+    padding: 16px 12px;
+    gap: 16px;
+  }
+  .setting-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .age-sliders {
+    gap: 16px;
+  }
+  .settings-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .reset-button,
+  .save-main-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-header {
+    padding: 12px;
+  }
+  .header-left {
+    gap: 12px;
+  }
+  .settings-header h1 {
+    font-size: 18px;
+  }
+  .settings-content {
+    padding: 12px 8px;
+  }
+  .settings-card {
+    border-radius: 12px;
+  }
+  .setting-label {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .distance-slider {
+    margin: 16px 0;
+  }
+  .save-button {
+    padding: 6px 16px;
+    font-size: 14px;
+  }
+  .get-location-button {
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+/* Dark mode support */
+
+@media (prefers-color-scheme: dark) {
+  .settings-container {
+    background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%);
+  }
+  .settings-header {
+    background: #262626;
+    border-bottom: 1px solid #404040;
+  }
+  .settings-card {
+    background: #262626;
+    border-color: #404040;
+  }
+  .settings-card .ant-card-head {
+    background: rgba(255, 68, 88, 0.1);
+    border-color: rgba(255, 68, 88, 0.2);
+  }
+  .setting-label,
+  .age-slider-item label {
+    color: #f0f0f0;
+  }
+  .setting-description {
+    color: #a0a0a0;
+  }
+}
+
+/* Loading States */
+
+.settings-card.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Animation for card hover */
+
+@keyframes cardHover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-2px);
+  }
+}
+
+/* Success message styling */
+
+.ant-message .ant-message-success .ant-message-content {
+  background: linear-gradient(135deg, #52c41a 0%, #73d13d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}

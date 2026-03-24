@@ -1,0 +1,126 @@
+.header {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 68, 88, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    padding: 0 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 70px;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-section {
+    flex: 1;
+}
+
+.app-logo {
+    margin: 0 !important;
+    color: #1890ff !important;
+    font-weight: bold;
+    font-size: 1.8rem !important;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.app-logo:hover {
+    color: #40a9ff !important;
+    transform: scale(1.05);
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.login-btn {
+    border-color: #1890ff !important;
+    color: #1890ff !important;
+    background: transparent !important;
+    border-radius: 25px !important;
+    height: 40px !important;
+    padding: 0 20px !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover,
+.login-btn:focus {
+    border-color: #1890ff !important;
+    color: white !important;
+    background: #1890ff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 68, 88, 0.3);
+}
+
+.register-btn {
+    background: #1890ff !important;
+    border-color: #1890ff !important;
+    border-radius: 25px !important;
+    height: 40px !important;
+    padding: 0 20px !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.register-btn:hover,
+.register-btn:focus {
+    background: #40a9ff !important;
+    border-color: #40a9ff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 107, 122, 0.4);
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .header-content {
+        padding: 0 16px;
+    }
+    .app-logo {
+        font-size: 1.5rem !important;
+    }
+    .login-btn,
+    .register-btn {
+        height: 36px !important;
+        padding: 0 16px !important;
+        font-size: 14px;
+    }
+    .auth-buttons .ant-space {
+        gap: 8px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        padding: 0 12px;
+    }
+    .app-logo {
+        font-size: 1.3rem !important;
+    }
+    .login-btn,
+    .register-btn {
+        height: 34px !important;
+        padding: 0 14px !important;
+        font-size: 13px;
+    }
+    .login-btn .anticon,
+    .register-btn .anticon {
+        display: none;
+    }
+}

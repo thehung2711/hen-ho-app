@@ -1,0 +1,36 @@
+.dashboard-container {
+  padding: 0;
+}
+
+.dashboard-container h1 {
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.dashboard-container h2 {
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.dashboard-container p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.ant-card {
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.ant-statistic-title {
+  font-size: 14px;
+  color: #666;
+}
+
+.ant-statistic-content {
+  font-size: 24px;
+  font-weight: 600;
+}

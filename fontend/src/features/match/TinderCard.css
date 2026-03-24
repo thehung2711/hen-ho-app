@@ -1,0 +1,710 @@
+/* Tinder Card Styles - Vibrant Dating App Design */
+
+.tinder-card {
+  position: relative;
+  width: 345px;
+  height: 615px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 15px rgba(255, 68, 88, 0.15), 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  user-select: none;
+  /* push the tinder card down from the top of the page */
+  margin: 10px auto 20px auto;
+  transition: all 0.3s ease;
+}
+
+.tinder-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 68, 88, 0.2), 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Gradient Animation Keyframes */
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-text {
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+}
+
+/* Swipe Animation Keyframes */
+
+@keyframes swipeRight {
+  0% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100vw) rotate(30deg);
+    opacity: 0;
+  }
+}
+
+@keyframes swipeLeft {
+  0% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100vw) rotate(-30deg);
+    opacity: 0;
+  }
+}
+
+@keyframes swipeUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.1);
+    opacity: 0;
+  }
+}
+
+@keyframes bounceBack {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(var(--drag-x, 0)) rotate(var(--drag-rotation, 0deg));
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+/* Swipe States */
+
+.tinder-card.swiping {
+  transition: none;
+  transform: translateX(var(--drag-x, 0)) rotate(var(--drag-rotation, 0deg));
+  z-index: 1000;
+}
+
+.tinder-card.swipe-right {
+  animation: swipeRight 0.3s ease-out forwards;
+}
+
+.tinder-card.swipe-left {
+  animation: swipeLeft 0.3s ease-out forwards;
+}
+
+.tinder-card.swipe-up {
+  animation: swipeUp 0.4s ease-out forwards;
+}
+
+.tinder-card.bounce-back {
+  animation: bounceBack 0.3s ease-out;
+}
+
+/* Card Image Container */
+
+.tinder-card-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Swipe Overlay Effects */
+
+.swipe-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-20deg);
+  font-size: 64px;
+  font-weight: 900;
+  padding: 20px 40px;
+  border: 8px solid;
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+  pointer-events: none;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.like-overlay {
+  color: #42c767;
+  border-color: #42c767;
+  background: rgba(66, 199, 103, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(66, 199, 103, 0.3);
+}
+
+.nope-overlay {
+  color: #1890ff;
+  border-color: #1890ff;
+  background: rgba(255, 68, 88, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(255, 68, 88, 0.3);
+}
+
+.super-like-overlay {
+  color: #4fc3f7;
+  border-color: #4fc3f7;
+  background: rgba(79, 195, 247, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(79, 195, 247, 0.3);
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+/* Show overlays based on swipe direction */
+
+.tinder-card.swiping.swipe-right-preview .like-overlay {
+  opacity: var(--swipe-opacity, 0);
+}
+
+.tinder-card.swiping.swipe-left-preview .nope-overlay {
+  opacity: var(--swipe-opacity, 0);
+}
+
+.tinder-card.swiping.swipe-up-preview .super-like-overlay {
+  opacity: var(--swipe-opacity, 0);
+}
+
+.tinder-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  /* make the top of the image align with the card corners */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Tap Zones for Navigation */
+
+.tap-zone {
+  position: absolute;
+  top: 0;
+  bottom: 120px;
+  width: 50%;
+  z-index: 2;
+  background: transparent;
+  cursor: pointer;
+}
+
+.tap-left {
+  left: 0;
+}
+
+.tap-right {
+  right: 0;
+}
+
+/* Photo Progress Bars */
+
+.photo-progress-bars {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  gap: 4px;
+  z-index: 3;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-bar.active,
+.progress-bar.completed {
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Info Button */
+
+.profile-info-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 4;
+}
+
+.profile-info-button:hover {
+  background: rgba(0, 0, 0, 0.6);
+  border-color: white;
+  transform: scale(1.1);
+}
+
+/* User Info Overlay */
+
+.user-info-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    transparent 0%,
+    rgba(0, 0, 0, 0.3) 30%,
+    rgba(0, 0, 0, 0.7) 70%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  padding: 60px 16px 120px 16px;
+  color: white;
+  z-index: 3;
+}
+
+.user-basic-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.user-name-age {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.user-name {
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(
+    135deg,
+    #40a9ff 0%,
+    #91d5ff 25%,
+    #ffc3a0 50%,
+    #40a9ff 75%,
+    #91d5ff 100%
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  animation: gradientShift 4s ease infinite;
+}
+
+.user-age {
+  font-size: 24px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #1890ff 0%, #69c0ff 50%, #91d5ff 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  animation: gradientShift 3s ease infinite;
+}
+
+.user-distance {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #4fc3f7 0%, #29b6f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+/* Action Buttons */
+
+.tinder-action-buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 0 20px;
+  z-index: 5;
+}
+
+.action-button {
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-size: 18px;
+}
+
+/* Rewind Button */
+
+.rewind-button {
+  width: 42px;
+  height: 42px;
+  background: #fff;
+  color: #ffc629;
+  font-size: 16px;
+}
+
+.rewind-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(255, 198, 41, 0.3);
+}
+
+/* Pass Button */
+
+.pass-button {
+  width: 56px;
+  height: 56px;
+  background: #fff;
+  color: #1890ff;
+  font-size: 20px;
+}
+
+.pass-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(255, 68, 88, 0.3);
+}
+
+/* Super Like Button */
+
+.super-like-button {
+  width: 42px;
+  height: 42px;
+  background: #fff;
+  color: #4fc3f7;
+  font-size: 16px;
+}
+
+.super-like-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(79, 195, 247, 0.3);
+}
+
+/* Like Button */
+
+.like-button {
+  width: 56px;
+  height: 56px;
+  background: #fff;
+  color: #42c767;
+  font-size: 20px;
+}
+
+.like-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(66, 199, 103, 0.3);
+}
+
+/* Boost Button */
+
+.boost-button {
+  width: 42px;
+  height: 42px;
+  background: #fff;
+  color: #9c27b0;
+  font-size: 16px;
+}
+
+.boost-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(156, 39, 176, 0.3);
+}
+
+/* Mobile Responsive - Enhanced Colors */
+
+@media (max-width: 480px) {
+  .tinder-card {
+    width: 100%;
+    max-width: 400px;
+    height: 70vh;
+    max-height: 600px;
+    margin: 0 10px 20px 10px;
+    box-shadow: 0 6px 20px rgba(255, 68, 88, 0.2), 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  .user-name {
+    font-size: 24px;
+    filter: drop-shadow(0 2px 6px rgba(255, 107, 122, 0.4));
+  }
+  .user-age {
+    font-size: 20px;
+    filter: drop-shadow(0 2px 6px rgba(255, 68, 88, 0.4));
+  }
+  .user-distance {
+    font-weight: 700;
+    filter: drop-shadow(0 1px 4px rgba(79, 195, 247, 0.4));
+  }
+  .tinder-action-buttons {
+    gap: 12px;
+    padding: 0 16px;
+  }
+  .action-button {
+    transform: scale(0.9);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  }
+  .action-button:hover {
+    transform: scale(1) rotate(3deg);
+  }
+}
+
+/* Scroll Mode Styles */
+
+.tinder-card.scroll-mode {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  /* Thay từ overflow-y: auto */
+  cursor: default;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.tinder-card.scroll-mode .tinder-card-image-container {
+  /* Ẩn ảnh gốc khi ở scroll mode vì đã có ảnh trong scroll-content */
+  display: none;
+}
+
+/* Ảnh trong scroll-content - có thể scroll */
+
+.scroll-image-container {
+  width: 100%;
+  height: 380px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  background: #f5f5f5;
+  margin: 0;
+  border-radius: 12px 12px 0 0;
+}
+
+.scroll-main-image {
+  margin-left: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* hide the small profile/info button when viewing details */
+
+.tinder-card.scroll-mode .profile-info-button {
+  display: none;
+}
+
+/* Remove hover zoom to match modal behavior */
+
+/* Remove overlay gradient in scroll mode - content displays below image */
+
+.tinder-card.scroll-mode .user-info-overlay {
+  display: none;
+}
+
+.tinder-card.scroll-mode .tap-zone {
+  display: none;
+}
+
+.tinder-card.scroll-mode .tinder-action-buttons {
+  position: sticky;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
+  backdrop-filter: blur(10px);
+  padding: 16px 20px;
+  margin: 0;
+  border-top: 1px solid rgba(255, 107, 122, 0.1);
+  z-index: 10;
+}
+
+.scroll-content {
+  /* Bỏ padding top để ảnh sát viền */
+  padding: 0;
+  background: white;
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* User Detail Info Styles - giống y hệt modal */
+
+.tinder-card.scroll-mode .user-detail-info {
+  padding: 20px 24px 24px 24px;
+  flex: 1;
+  /* Thêm padding top/left/right/bottom cho content */
+}
+
+.tinder-card.scroll-mode .user-basic-info {
+  margin-bottom: 20px;
+}
+
+.tinder-card.scroll-mode .user-name {
+  margin: 0 0 8px 0 !important;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000 !important;
+}
+
+.tinder-card.scroll-mode .user-age {
+  font-weight: normal;
+  color: #666666 !important;
+  font-size: 24px;
+}
+
+.tinder-card.scroll-mode .user-location {
+  margin-bottom: 16px;
+  color: #000000 !important;
+}
+
+.tinder-card.scroll-mode .user-bio {
+  margin-bottom: 20px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #1890ff;
+}
+
+.tinder-card.scroll-mode .user-bio p {
+  margin: 0;
+  line-height: 1.6;
+  color: #000000 !important;
+}
+
+.tinder-card.scroll-mode .user-additional-info {
+  margin-bottom: 20px;
+}
+
+.tinder-card.scroll-mode .info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f5f5f5;
+  color: #000000 !important;
+}
+
+.tinder-card.scroll-mode .info-item strong {
+  color: #000000 !important;
+}
+
+.tinder-card.scroll-mode .info-item span {
+  color: #000000 !important;
+}
+
+.tinder-card.scroll-mode .info-item:last-child {
+  border-bottom: none;
+}
+
+.tinder-card.scroll-mode .user-interests {
+  margin-bottom: 24px;
+}
+
+.tinder-card.scroll-mode .user-interests > span {
+  color: #000000 !important;
+}
+
+.tinder-card.scroll-mode .interests-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.tinder-card.scroll-mode .interest-tag {
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #1890ff 0%, #40a9ff 100%);
+  color: white;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Photo Gallery */
+
+.tinder-card.scroll-mode .user-photos {
+  margin-top: 24px;
+  padding-bottom: 16px;
+}
+
+.tinder-card.scroll-mode .user-photos > span {
+  display: block;
+  margin-bottom: 12px;
+  color: #000000 !important;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tinder-card.scroll-mode .user-photos > span strong {
+  color: #000000 !important;
+}
+
+.tinder-card.scroll-mode .photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.tinder-card.scroll-mode .photo-item {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.tinder-card.scroll-mode .photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Xóa các style cũ không dùng nữa - giờ dùng style từ modal */
+
+/* Action Buttons */
+
+.action-button {
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-size: 18px;
+}

@@ -1,0 +1,354 @@
+@import "~antd/dist/reset.css";
+.landing-page {
+    min-height: calc(100vh - 70px);
+    /* Subtract header height */
+    background: linear-gradient(135deg, #1890ff 0%, #40a9ff 100%);
+    padding: 0;
+    margin: 0;
+}
+
+.landing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.hero-section {
+    color: white;
+}
+
+.landing-title {
+    color: white !important;
+    font-size: 3.5rem !important;
+    font-weight: bold !important;
+    margin-bottom: 20px !important;
+    line-height: 1.2 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.landing-subtitle {
+    color: white !important;
+    font-size: 1.3rem !important;
+    margin-bottom: 50px !important;
+    opacity: 0.9;
+    line-height: 1.6 !important;
+}
+
+.feature-grid {
+    margin-bottom: 50px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 15px !important;
+    transition: transform 0.3s ease, background 0.3s ease !important;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px) !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+.feature-card .ant-card-body {
+    padding: 30px !important;
+}
+
+.feature-content {
+    text-align: center;
+    color: white;
+}
+
+.feature-icon {
+    font-size: 2.5rem !important;
+    margin-bottom: 15px;
+    display: block;
+    color: white !important;
+}
+
+.feature-content .ant-typography {
+    color: white !important;
+    margin: 0 !important;
+}
+
+.feature-content .ant-typography h3 {
+    font-size: 1.4rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 15px !important;
+}
+
+.feature-content .ant-typography div {
+    opacity: 0.9;
+    line-height: 1.5 !important;
+}
+
+.cta-section {
+    display: flex !important;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cta-button.ant-btn {
+    height: auto !important;
+    padding: 15px 30px !important;
+    border-radius: 50px !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    min-width: 150px;
+}
+
+.cta-button.ant-btn-primary {
+    background: white !important;
+    color: #1890ff !important;
+    border-color: white !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button.ant-btn-primary:hover {
+    background: #f0f0f0 !important;
+    color: #1890ff !important;
+    border-color: #f0f0f0 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+.cta-button.secondary.ant-btn {
+    background: transparent !important;
+    color: white !important;
+    border: 2px solid white !important;
+}
+
+.cta-button.secondary.ant-btn:hover {
+    background: white !important;
+    color: #1890ff !important;
+    border-color: white !important;
+    transform: translateY(-2px);
+}
+
+.app-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-mockup {
+    width: 300px;
+    height: 600px;
+    background: #000;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 20px;
+    padding: 40px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.phone-screen::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 5px;
+    background: #333;
+    border-radius: 3px;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px 0;
+}
+
+.profile-card.ant-card {
+    background: white !important;
+    border-radius: 20px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto !important;
+    text-align: center;
+}
+
+.profile-card .ant-card-cover {
+    border-radius: 20px 20px 0 0 !important;
+}
+
+.profile-card .ant-card-meta-title {
+    color: #333 !important;
+    font-size: 1.2rem !important;
+    margin: 0 !important;
+}
+
+.profile-card .ant-card-meta-description {
+    color: #666 !important;
+    font-size: 0.9rem !important;
+    margin: 0 !important;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(45deg, #40a9ff, #ffc658);
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    position: relative;
+}
+
+.profile-image::after {
+    content: "👤";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    opacity: 0.7;
+}
+
+.profile-info h4 {
+    margin: 0 0 5px 0;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.profile-info p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.action-buttons.ant-space {
+    margin-top: 20px !important;
+    justify-content: center !important;
+}
+
+.action-btn {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.action-btn.ant-btn {
+    width: 60px !important;
+    height: 60px !important;
+    font-size: 1.5rem !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease !important;
+}
+
+.action-btn.reject {
+    background: #ff4757;
+    color: white;
+}
+
+.action-btn.reject.ant-btn {
+    background: #ff4757 !important;
+    border-color: #ff4757 !important;
+    color: white !important;
+}
+
+.action-btn.like {
+    background: #2ed573;
+    color: white;
+}
+
+.action-btn.like.ant-btn {
+    background: #2ed573 !important;
+    border-color: #2ed573 !important;
+    color: white !important;
+}
+
+.action-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.action-btn.ant-btn:hover {
+    transform: scale(1.1) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .landing-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 40px 20px;
+    }
+    .landing-title {
+        font-size: 2.5rem;
+    }
+    .landing-subtitle {
+        font-size: 1.1rem;
+    }
+    .phone-mockup {
+        width: 250px;
+        height: 500px;
+    }
+    .cta-section {
+        justify-content: center;
+    }
+    .cta-button {
+        min-width: 120px;
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .landing-title {
+        font-size: 2rem;
+    }
+    .feature-card {
+        padding: 20px;
+    }
+    .phone-mockup {
+        width: 200px;
+        height: 400px;
+    }
+    .profile-image {
+        width: 80px;
+        height: 80px;
+    }
+    .profile-image::after {
+        font-size: 2rem;
+    }
+}

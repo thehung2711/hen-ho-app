@@ -1,0 +1,245 @@
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1890ff 0%, #40a9ff 100%);
+  padding: 20px;
+}
+
+.register-wrapper {
+  width: 100%;
+  max-width: 450px;
+}
+
+.register-card {
+  border-radius: 20px !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95) !important;
+  padding: 20px;
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.register-title {
+  color: #1890ff !important;
+  margin-bottom: 8px !important;
+  font-weight: bold;
+}
+
+.register-subtitle {
+  font-size: 16px;
+  color: #666 !important;
+}
+
+.register-form {
+  margin-top: 20px;
+}
+
+.ant-form-item-label > label {
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.register-input {
+  border-radius: 10px !important;
+  border: 1px solid #d9d9d9;
+  transition: all 0.3s ease;
+}
+
+.register-input:hover,
+.register-input:focus {
+  border-color: #1890ff !important;
+  box-shadow: 0 0 0 2px rgba(255, 68, 88, 0.1) !important;
+}
+
+.input-icon {
+  color: #1890ff;
+}
+
+.register-button {
+  background: #1890ff !important;
+  border-color: #1890ff !important;
+  border-radius: 10px !important;
+  height: 48px !important;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.register-button:hover,
+.register-button:focus {
+  background: #40a9ff !important;
+  border-color: #40a9ff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 68, 88, 0.3) !important;
+}
+
+.register-divider {
+  margin: 24px 0 16px 0;
+}
+
+.register-divider .ant-divider-inner-text {
+  color: #999;
+  font-size: 14px;
+}
+
+.login-section {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.login-link {
+  color: #1890ff !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.login-link:hover {
+  color: #40a9ff !important;
+}
+
+/* Form validation styles */
+
+.ant-form-item-has-error .register-input {
+  border-color: #ff4d4f !important;
+}
+
+.ant-form-item-has-error .register-input:hover,
+.ant-form-item-has-error .register-input:focus {
+  border-color: #ff4d4f !important;
+  box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.1) !important;
+}
+
+.ant-form-item-explain-error {
+  font-size: 13px;
+}
+
+/* Success validation styles */
+
+.ant-form-item-has-success .register-input {
+  border-color: #52c41a !important;
+}
+
+.ant-form-item-has-success .register-input:hover,
+.ant-form-item-has-success .register-input:focus {
+  border-color: #52c41a !important;
+  box-shadow: 0 0 0 2px rgba(82, 196, 26, 0.1) !important;
+}
+
+/* Loading state */
+
+.register-button .anticon {
+  margin-right: 8px;
+}
+
+/* Password strength indicator could be added here */
+
+.password-strength {
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.password-strength.weak {
+  color: #ff4d4f;
+}
+
+.password-strength.medium {
+  color: #faad14;
+}
+
+.password-strength.strong {
+  color: #52c41a;
+}
+
+/* Responsive Design */
+
+@media (max-width: 480px) {
+  .register-container {
+    padding: 16px;
+  }
+  .register-card {
+    padding: 16px;
+    border-radius: 16px !important;
+  }
+  .register-title {
+    font-size: 24px !important;
+  }
+  .register-subtitle {
+    font-size: 14px;
+  }
+  .register-input {
+    border-radius: 8px !important;
+  }
+  .register-button {
+    border-radius: 8px !important;
+    height: 44px !important;
+    font-size: 15px;
+  }
+}
+
+/* Focus styles for better accessibility */
+
+.register-input:focus-within {
+  outline: none;
+}
+
+.register-button:focus {
+  outline: 2px solid #1890ff;
+  outline-offset: 2px;
+}
+
+/* Animation for form errors */
+
+.ant-form-item-has-error {
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+/* Form item spacing */
+
+.ant-form-item {
+  margin-bottom: 20px;
+}
+
+.ant-form-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Input focus glow effect */
+
+.register-input:focus,
+.register-input.ant-input-focused {
+  box-shadow: 0 0 0 2px rgba(255, 68, 88, 0.1), 0 0 10px rgba(255, 68, 88, 0.1) !important;
+}
+
+/* Password input specific styles */
+
+.ant-input-password .ant-input {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.ant-input-password:hover,
+.ant-input-password:focus {
+  border-color: #1890ff !important;
+  box-shadow: 0 0 0 2px rgba(255, 68, 88, 0.1) !important;
+}
