@@ -21,7 +21,6 @@
    - UI Library: Ant Design (AntD).
    - Giao tiếp API: Axios.
    - Real-time: WebSocket (STOMP & SockJS).
-   - Lưu trữ ảnh: Supabase.
 
   🚀 Cài đặt nhanh
 
